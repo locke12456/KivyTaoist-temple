@@ -5,32 +5,11 @@ Widget animation
 This is an example of an animation creation, and how you can apply it to a
 widget.
 '''
-
-import kivy
-from kivy.uix.widget import Widget
-from kivy.uix.boxlayout import BoxLayout
-from kivy.graphics.texture import Texture
-from kivy.atlas import Atlas
-from kivy.graphics.instructions import Callback
-from kivy.clock import Clock
+from kivy.core.audio import SoundLoader
 import Stage
-kivy.require('1.0.7')
-
-from kivy.animation import Animation
 from kivy.app import App
 from kivy.uix.button import Button
-from kivy.core.audio import SoundLoader
-from kivy.core.image import Image
-from kivy.graphics.instructions import Canvas
 
-from functools import partial
-from kivy.graphics import Color, Rectangle
-# method 1 (preferred)
-from kivy.base import EventLoop
-EventLoop.ensure_window()
-
-# method 2
-from kivy.core.window import Window
 
 class TestApp(App):
     wid = Stage.Stage()

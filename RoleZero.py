@@ -10,7 +10,8 @@ class RoleZero(Role):
         self.Create("charter_malin.atlas")
         self._status = Status(self , self._atlas )
     def stand(self ,pos):
-        _ani = self._status.stand()
+        _ani = self._status.stand
+        _ani.Filp = True
         _ani.canvas = self.canvas
         _ani.pos = pos
         _ani.size = self.size
@@ -18,7 +19,8 @@ class RoleZero(Role):
         _ani.anim_delay = 5.0/30.0
 
     def walk(self , pos):
-        _ani = self._status.walk()
+        _ani = self._status.walk
+        _ani.Filp = True
         _ani.canvas = self.canvas
         _ani.pos = pos
         _ani.size = self.size
